@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Code Editor</title>
+  <style>
+    body {
+      font-family: monospace;
+      background: #0f172a;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    #editor {
+      height: 70vh;
+      width: 100%;
+    }
+
+    #controls {
+      padding: 10px;
+      background: #1e293b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    select,
+    button {
+      padding: 8px 12px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    select {
+      background: #334155;
+      color: white;
+    }
+
+    button {
+      background: #3b82f6;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #2563eb;
+    }
+
+    pre {
+      background: #1e293b;
+      color: #e2e8f0;
+      padding: 15px;
+      height: 20vh;
+      overflow-y: auto;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="controls">
+    <select id="language">
+      <option value="python">Python</option>
+      <option value="cpp">C++</option>
+    </select>
+    <button id="run-btn">Run Code</button>
+  </div>
+  <div id="editor">print("Hello, World!")</div>
+  <pre id="output"></pre>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.3/ace.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
